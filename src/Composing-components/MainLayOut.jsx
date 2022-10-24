@@ -69,19 +69,20 @@ export default class MainLayOut extends Component {
       (Product) => Product.category === "Electronics"
     ),
   };
+  handleFilter = (name) => {
+    const productsToDispaly = this.Products.filter(
+      (Products) => Products.name.toLocaleLowerCase().includes(name) === name
+    );
+    this.setState({ productsToDispaly });
+  };
+
   handleActiveTabChanges = (activeTab) => {
     const productsToDispaly = this.Products.filter(
       (Products) => Products.category === activeTab
     );
     this.setState({ productsToDispaly });
   };
-  handleFilter = (activeTab) => {
-    const productsToDispaly = this.Products.name
-      .toLowercase()
-      .includes(name)
-      .Products.name((Products) => Products.category === activeTab);
-    this.setState({ productsToDispaly });
-  };
+
   render() {
     return (
       <div>
@@ -94,7 +95,7 @@ export default class MainLayOut extends Component {
               />
             </div>
             <div className="col-md-9">
-              <Searchbar />
+              <Searchbar handleFilter={this.handleFilter} />
               <div className="row">
                 {this.state.productsToDispaly.map((Products, index) => (
                   <div key={index} className="col-md-4 product">

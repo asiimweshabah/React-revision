@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Product from "./Product";
 export default class CategoryListItem extends Component {
   state = {
     category: this.props.category,
@@ -9,6 +10,12 @@ export default class CategoryListItem extends Component {
     }
     return "";
   };
+  btnDynamically() {
+    let classes = "btn m-2 btn-";
+    classes +=
+      this.state.category.numberOfItemsInStock < 3 ? "primary" : "danger";
+    return classes;
+  }
   render() {
     return (
       <li
@@ -21,7 +28,7 @@ export default class CategoryListItem extends Component {
         <div className="ms-2 me-auto">
           <div className="fw-bold">{this.state.category.name}</div>
         </div>
-        <span className="badge bg-primary rounded-pill">
+        <span className={this.btnDynamically()}>
           {this.state.category.numberOfItemsInStock}
         </span>
       </li>

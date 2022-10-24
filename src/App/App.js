@@ -20,27 +20,7 @@ class App extends Component {
   render() {
     const total = calculateSum(5, 3);
     const product = calculateProduct(5, 3);
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit your component now<code>src/App.js</code> and save to reload.
-            {total + product}
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          <DateTime />
-          <Props name={"Shabah"} calculateProduct={calculateProduct} />
-        </header>
-      </div>
-    );
+    return <div className="App"></div>;
   }
 }
 
