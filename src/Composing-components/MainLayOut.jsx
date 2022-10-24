@@ -64,16 +64,22 @@ export default class MainLayOut extends Component {
   ];
 
   state = {
-    activeCategoy: "Electronics";
+    // activeCategoy: "Electronics";
     productsToDispaly: this.Products.filter(
       (Product) => Product.category === "Electronics"
     ),
   };
-
   handleActiveTabChanges = (activeTab) => {
     const productsToDispaly = this.Products.filter(
       (Products) => Products.category === activeTab
     );
+    this.setState({ productsToDispaly });
+  };
+  handleFilter = (activeTab) => {
+    const productsToDispaly = this.Products.name
+      .toLowercase()
+      .includes(name)
+      .Products.name((Products) => Products.category === activeTab);
     this.setState({ productsToDispaly });
   };
   render() {
