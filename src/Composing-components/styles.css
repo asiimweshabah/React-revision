@@ -1,0 +1,12 @@
+.content {
+  margin-top: 30px;
+}
+.container-fluid {
+  width: 96% !important;
+}
+.product {
+  margin-top: 25px;
+}
+.active {
+  background-color: yellow !important;
+}
