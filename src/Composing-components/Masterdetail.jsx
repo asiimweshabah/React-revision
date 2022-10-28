@@ -16,7 +16,7 @@ export default class MasterDetail extends Component {
       },
       {
         name: "Jewellry",
-        numberOfItemsInStock: 2,
+        numberOfItemsInStock: 3,
         image: "",
       },
       {

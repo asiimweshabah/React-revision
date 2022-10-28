@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Product from "./Product";
+// import Product from "./Product";
 export default class CategoryListItem extends Component {
   state = {
     category: this.props.category,
@@ -13,7 +13,7 @@ export default class CategoryListItem extends Component {
   btnDynamically() {
     let classes = "btn m-2 btn-";
     classes +=
-      this.state.category.numberOfItemsInStock < 3 ? "primary" : "danger";
+      this.state.category.numberOfItemsInStock < 3 ? "danger" : "success";
     return classes;
   }
   render() {
