@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
 export default class Navbar extends Component {
   state = {
     count: 0,
@@ -7,23 +7,27 @@ export default class Navbar extends Component {
 
   render() {
     return (
-      <div className="d-flex container">
-        <nav className="navbar navbar-light bg-light ">
-          <span className="navbar-brand mb-0 h1">Navbar</span>
-        </nav>
-        <div className="justify-content-end">
-          <span className={this.btnDynamically()}>{this.formatCount()}</span>
-          <button
-            onClick={this.handleIncreament}
-            className="btn btn-secondary m-2"
-          >
-            Add
-          </button>
-          <button onClick={this.handleReset} className="btn btn-primary m-2">
-            Reset
-          </button>
+      <nav className="navbar navbar-light bg-secondary ">
+        <div className="d-flex container">
+          <span className="navbar-brand mb-0 text-white">Navbar</span>
+          <Link className="btn btn-success" to={"/login"}>
+            Login
+          </Link>
         </div>
-      </div>
+      </nav>
+      //
+      //  <div className="justify-content-end">
+      //   <span className={this.btnDynamically()}>{this.formatCount()}</span>
+      //   <button
+      //     onClick={this.handleIncreament}
+      //     className="btn btn-secondary m-2"
+      //   >
+      //     Add
+      //   </button>
+      //   <button onClick={this.handleReset} className="btn btn-primary m-2">
+      //     Reset
+      //   </button>
+      // </div>
     );
   }
 

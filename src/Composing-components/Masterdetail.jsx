@@ -24,6 +24,11 @@ export default class MasterDetail extends Component {
         numberOfItemsInStock: 2,
         image: "",
       },
+      {
+        name: "Computing",
+        numberOfItemsInStock: 0,
+        image: "",
+      },
     ],
   };
   handleChildClick = (id, isActive) => {
@@ -37,19 +42,20 @@ export default class MasterDetail extends Component {
   render() {
     return (
       <ol className="list-group">
-        {this.state.categories.map((category) => {
-          return (
-            <CategoryListItem
-              key={category.name}
-              id={category.name}
-              category={category}
-              name={category.name}
-              number={category.numberOfItemsInStock}
-              onChildClick={this.handleChildClick}
-              activeItem={this.state.activeItem}
-            />
-          );
-        })}
+        {this.state.categories
+          .filter((category) => category.numberOfItemsInStock > 0)
+          .map((category) => {
+            return (
+              <CategoryListItem
+                key={category.name}
+                id={category.name}
+                category={category}
+                numberOfItemsInStock={category.numberOfItemsInStock}
+                onChildClick={this.handleChildClick}
+                activeItem={this.state.activeItem}
+              />
+            );
+          })}
       </ol>
     );
   }

@@ -11,6 +11,7 @@ export default class Searchbar extends Component {
               type="search"
               placeholder="Search"
               aria-label="Search"
+              onChange={(e) => this.props.onFilter(e.target.value)}
             />
             <button className="btn btn-outline-success" type="submit">
               Search
