@@ -10,7 +10,7 @@ export default class Login extends Component {
             <h3 className="text-center my-5">Sign in </h3>
           </div>
           <input type="text" className="w-50" placeholder="UserName" />
-
+          <br />
           <input
             type="password my"
             className="w-50 my-5"

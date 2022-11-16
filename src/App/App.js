@@ -8,7 +8,7 @@ import { Component } from "react";
 // import Props from "../Components/Props/Props";
 import { BrowserRouter, Navigate } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
-import MainLayOut from "../Composing-components/MainLayOut";
+
 import Login from "../Dashboard/Login";
 import DashboardHome from "../Dashboard/DashboardHome";
 // import Product from "../product/Product";
@@ -33,7 +33,6 @@ class App extends Component {
           <Route path="/" element={<Navigate to={"mainlayout"} />} />
           <Route path="/mainlayout" element={<MainLayOutRouter />} />
           <Route path="/login" element={<Login />} />
-          {/* <Route path="/login" element={<Login />} /> */}
           <Route path="/dashboardHome" element={<DashboardHome />} />
           <Route path="/product" element={<ProductDetails />} />
         </Routes>
