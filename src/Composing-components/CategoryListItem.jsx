@@ -3,6 +3,8 @@ import React, { Component } from "react";
 export default class CategoryListItem extends Component {
   state = {
     category: this.props.category,
+    // category: this.props.category,
+    moreDetails: this.props.moreDetails,
   };
 
   getBackgroundClass = () => {

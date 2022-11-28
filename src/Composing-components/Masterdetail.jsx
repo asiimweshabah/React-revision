@@ -11,12 +11,12 @@ export default class MasterDetail extends Component {
       },
       {
         name: "Foot Ware",
-        numberOfItemsInStock: 1,
+        numberOfItemsInStock: 2,
         image: "",
       },
       {
         name: "Jewellry",
-        numberOfItemsInStock: 3,
+        numberOfItemsInStock: 2,
         image: "",
       },
       {

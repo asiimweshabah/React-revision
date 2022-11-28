@@ -14,7 +14,7 @@ import image_7 from "../Composing-components/img/smart tv.jpg";
 import image_8 from "../Composing-components/img/solar.jpg";
 import image_9 from "../Composing-components/img/sports.jpg";
 import ChildrenTest from "./ChildrenTest";
-
+import { Link } from "react-router-dom";
 export default class MainLayOut extends Component {
   Products = [
     {
@@ -23,6 +23,11 @@ export default class MainLayOut extends Component {
       category: "Electronics",
       description: "Long lasting",
       image: image_8,
+      moreDetails: (
+        <Link className="text-white" to="/productdetails">
+          Visit
+        </Link>
+      ),
     },
     {
       id: 2,
@@ -30,6 +35,11 @@ export default class MainLayOut extends Component {
       category: "Entertainment",
       description: "Relaxes your minds",
       image: image_5,
+      moreDetails: (
+        <Link className="text-white" to="/productdetails/2">
+          Visit
+        </Link>
+      ),
     },
     {
       id: 3,
@@ -37,6 +47,11 @@ export default class MainLayOut extends Component {
       category: "Entertainment",
       description: "Sports world",
       image: image_9,
+      moreDetails: (
+        <Link className="text-white" to="/productdetails/3">
+          Visit
+        </Link>
+      ),
     },
     {
       id: 4,
@@ -44,6 +59,11 @@ export default class MainLayOut extends Component {
       category: "Electronics",
       description: "Clear picture",
       image: image_7,
+      moreDetails: (
+        <Link className="text-white" to="/productdetails/4">
+          Visit
+        </Link>
+      ),
     },
     {
       id: 5,
@@ -51,27 +71,47 @@ export default class MainLayOut extends Component {
       category: "Electronics",
       description: "Good quality products",
       image: image_1,
+      moreDetails: (
+        <Link className="text-white" to="/productdetails/5">
+          Visit
+        </Link>
+      ),
     },
     {
       id: 6,
-      name: "Ladies footware",
+      name: "Men's footware",
       category: "Foot Ware",
       description: "Good quality shoes",
       image: image_4,
+      moreDetails: (
+        <Link className="text-white" to="/productdetails/6">
+          Visit
+        </Link>
+      ),
     },
     {
       id: 7,
-      name: "Menshoes",
+      name: "Jewellery Watches",
       category: "Jewellry",
-      description: "Strong like a lion",
+      description: "Doesnot fade",
       image: image_6,
+      moreDetails: (
+        <Link className="text-white" to="productdetails/7">
+          Visit
+        </Link>
+      ),
     },
     {
       id: 8,
       name: "Watches",
-      category: "Jewellry",
+      category: "Foot Ware",
       description: "Long lasting ",
       image: image_3,
+      moreDetails: (
+        <Link className="text-white" to="/productdetails/8">
+          Visit
+        </Link>
+      ),
     },
     {
       id: 9,
@@ -79,6 +119,11 @@ export default class MainLayOut extends Component {
       category: "Jewellry",
       description: "Originally made",
       image: image_2,
+      moreDetails: (
+        <Link className="text-white" to="/productdetails/9">
+          Visit
+        </Link>
+      ),
     },
   ];
 

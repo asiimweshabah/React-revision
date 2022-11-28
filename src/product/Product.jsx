@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-
-import { Link } from "react-router-dom";
+import { AiFillStar, AiOutlineStar, AiFillHeart } from "react-icons/ai";
 export default class Product extends Component {
   render() {
     return (
@@ -8,18 +7,32 @@ export default class Product extends Component {
         <div className="card">
           <img
             src={this.props.product.image}
-            className="card-img-top "
+            className="card"
             style={{ height: "250px" }}
             alt="..."
           />
           <div className="card-body">
-            <h5 className="card-title">{this.props.product.name}</h5>
+            <div className="d-flex justify-content-between">
+              <h5 className="card-title">{this.props.product.name}</h5>
+              <AiFillHeart
+                className="text-danger"
+                style={{ fontSize: "20px" }}
+              />
+            </div>
             <p className="card-title">{this.props.product.description}</p>
-
-            <p className="card-text"></p>
-            <Link className="btn btn-primary" to={"mainlayout/productdetails"}>
-              Visit
-            </Link>
+            <div className="d-flex">
+              <h5>Rates</h5>
+              <div className="mx-2 ">
+                <AiFillStar className="text-warning" />
+                <AiFillStar className="text-warning" />
+                <AiFillStar className="text-warning" />
+                <AiFillStar className="text-warning" />
+                <AiOutlineStar className="text-warning" />
+              </div>
+            </div>
+            <button className="btn btn-primary">
+              {this.props.product.moreDetails}
+            </button>
           </div>
         </div>
       </div>
