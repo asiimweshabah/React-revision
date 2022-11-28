@@ -38,13 +38,14 @@ export default class CategoryListItem extends Component {
     if (this.props.numberOfItemsInStock > 0) {
       return (
         <li
+          style={{ height: "70px" }}
           className={
-            "my-2 list-group-item d-flex justify-content-between align-items-center " +
+            "my-2 py-2 list-group-item d-flex justify-content-between align-items-center " +
             this.getBackgroundClass()
           }
           onClick={() => this.props.onChildClick(this.props.id, true)}
         >
-          <div className="ms-2 me-auto">
+          <div>
             <div className="fw-bold">{this.state.category.name}</div>
             {this.getWarningMessage()}
           </div>
