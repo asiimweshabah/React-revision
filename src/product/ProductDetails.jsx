@@ -1,24 +1,22 @@
-// import React from "react";
-// import { useParams } from "react-router-dom";
+import React from "react";
+import { useParams } from "react-router-dom";
+import { Database } from "./Database";
+const ProductDetails = (props) => {
+  const params = useParams();
+  const id = Number(params.id);
+  const product = Database.filter((product) => product.id === id)[0];
 
-// const ProductDetails = (props) => {
-//   const routeParams = useParams();
-//   const Products = this.props.Products.filter(
-//     (product) => product.id === +routeParams.id
-//   )[0];
-//   return <div>{<h2>{this.Product.image}</h2>}</div>;
-// };
-
-// export default ProductDetails;
-import React, { Component } from "react";
-
-export default class ProductDetails extends Component {
-  render() {
-    return (
-      <div>
-        ProductDetails
-        {this.props.Products.name}
+  return (
+    <div className="container">
+      <div className="row mt-5">
+        <div className="col-5">
+          <img src={product.image} alt="" className="w-100" />
+        </div>
+        <div className="col-8">
+          <h4>{product.name}</h4>
+        </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+export default ProductDetails;

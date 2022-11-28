@@ -34,7 +34,10 @@ class App extends Component {
           <Route path="/" element={<Navigate to={"mainlayout"} />} />
           <Route path="/mainlayout" element={<MainLayOutRouter />}>
             <Route index element={<MainLayOut />}></Route>
-            <Route to="productDetails:Id" element={<ProductDetails />}></Route>
+            <Route
+              path="productDetails/:id/:title"
+              element={<ProductDetails />}
+            ></Route>
           </Route>
           <Route path="/cart" element={<ShoppingCart />} />
           <Route path="/login" element={<Login />} />

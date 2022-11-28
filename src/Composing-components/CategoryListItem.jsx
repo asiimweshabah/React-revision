@@ -39,7 +39,7 @@ export default class CategoryListItem extends Component {
       return (
         <li
           className={
-            "list-group-item d-flex justify-content-between align-items-center " +
+            "my-2 list-group-item d-flex justify-content-between align-items-center " +
             this.getBackgroundClass()
           }
           onClick={() => this.props.onChildClick(this.props.id, true)}
@@ -48,7 +48,7 @@ export default class CategoryListItem extends Component {
             <div className="fw-bold">{this.state.category.name}</div>
             {this.getWarningMessage()}
           </div>
-          <span className={"badge rounded-pill" + this.getBadgeClass()}>
+          <span className={"badge rounded-pill " + this.getBadgeClass()}>
             {this.props.numberOfItemsInStock}
           </span>
         </li>

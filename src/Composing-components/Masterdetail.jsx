@@ -21,7 +21,7 @@ export default class MasterDetail extends Component {
       },
       {
         name: "Entertainment",
-        numberOfItemsInStock: 2,
+        numberOfItemsInStock: 3,
         image: "",
       },
       {

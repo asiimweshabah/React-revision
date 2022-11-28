@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { AiFillStar, AiOutlineStar, AiFillHeart } from "react-icons/ai";
 export default class Product extends Component {
   render() {
@@ -30,9 +31,12 @@ export default class Product extends Component {
                 <AiOutlineStar className="text-warning" />
               </div>
             </div>
-            <button className="btn btn-primary">
-              {this.props.product.moreDetails}
-            </button>
+
+            <Link
+              to={`productdetails/${this.props.product.id}/${this.props.product.name}`}
+            >
+              Visit
+            </Link>
           </div>
         </div>
       </div>
